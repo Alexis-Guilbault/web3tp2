@@ -1,0 +1,51 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.conteneur {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "mise forms coordinates"
+    "mise fin scrolling"
+    "zdog timer scrolling";
+    height: 100%;
+    width: 100%;
+}
+
+.mise_en_contexte {
+    background-color: red;
+    grid-area: mise;
+}
+
+.zdog {
+    background-color: blue;
+    grid-area: zdog;
+}
+
+.forms {
+    background-color: green;
+    grid-area: forms;
+}
+
+.fin {
+    background-color: pink;
+    grid-area: fin; 
+}
+
+.timer {
+    background-color: yellow;
+    grid-area: timer;
+}
+
+.coordinates {
+    background-color: purple;
+    grid-area: coordinates;
+}
+
+.scroll {
+    background-color: orange;
+    grid-area: scrolling;
+}
