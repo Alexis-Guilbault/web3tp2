@@ -26,8 +26,38 @@
 </head>
 <body>
     <div class="conteneur">
-        <div class="mise_en_contexte">
-            
+        <div class="mise_en_contexte d-flex flex-column align-items-center justify-content-center">
+            <h1 class="display-1 text-center">Mission : Trouver le Chaki <i class="bi bi-rocket"></i></h1>
+            <p class="display-6 text-center">Le Chaki <i class="bi bi-rocket"></i> est un alien s'étant retrouvé sur la terre. À vous de le repérer.</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Modal">
+            <i class="bi bi-info-circle"></i> Plus sur le Chaki <i class="bi bi-rocket"></i>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Entête -->
+                        <div class="modal-header bg-dark text-danger">
+                            <h5 class="modal-title" id="ModalLabel">Plus sur Chaki</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <!-- Corps -->
+                        <div class="modal-body bg-dark text-danger">
+                            En 2029, une météorite est tombée quelque part au Québec. À l'intérieur de cette météorite se trouvait un alien : Le Chaki <i class="bi bi-rocket"></i>.
+                            <hr class="text-danger">
+                            Pendant des millénaires, le Chaki <i class="bi bi-rocket"></i> a aspiré les nutriments de la terre pour se préparer à propager son espèce.
+                        </div>
+                        <!-- Pied -->
+                        <div class="modal-footer bg-dark text-danger">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
         
         <div class="zdog">
