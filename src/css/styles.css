@@ -25,6 +25,11 @@ body {
     grid-area: zdog;
 }
 
+.zdog-canvas {
+    width: 80%;
+    height: 80%;
+}
+
 .forms {
     background-color: green;
     grid-area: forms;
