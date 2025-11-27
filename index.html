@@ -15,7 +15,7 @@
         "imports": {
             "animejs": "./node_modules/animejs/dist/bundles/anime.esm.min.js",
             "chart.js/auto": "./node_modules/chart.js/auto/auto.js",
-            "@kurkle/color": "./node_modules/@kurkle/color/dist/color.min.js",
+            "@kurkle/color": "./node_modules/@kurkle/color/dist/color.esm.js",
             "zdog": "https://esm.sh/zdog",
             "maplibre": "https://unpkg.com/maplibre-gl@5.13.0/dist/maplibre-gl.css",
             "vfx-js": "https://esm.sh/@vfx-js/core",
@@ -31,12 +31,14 @@
     <script src="./src/js/maplibre.js" type="module"></script>
     <script src="./src/js/vfx.js" type="module"></script>
     <script src="./src/js/tonejs.js" type="module"></script>
+
+    <script src="./src/js/script.js" defer></script>
 </head>
 <body>
     <div class="conteneur">
-        <div class="mise_en_contexte d-flex flex-column align-items-center justify-content-center">
+        <div class="mise_en_contexte d-flex flex-column align-items-center justify-content-center p-2">
             <h1 class="display-1 text-center">Mission : Trouver le Chaki <i class="bi bi-rocket"></i></h1>
-            <p class="display-6 text-center">Le Chaki <i class="bi bi-rocket"></i> est un alien s'étant retrouvé sur la terre. À vous de le repérer.</p>
+            <p class="display-6 text-center">Le Chaki <i class="bi bi-rocket"></i> est un alien dangereux s'étant retrouvé sur la terre. Vous devez l'abattre.</p>
 
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Modal">
             <i class="bi bi-info-circle"></i> Plus sur le Chaki <i class="bi bi-rocket"></i>
@@ -51,7 +53,7 @@
                         </div>
 
                         <div class="modal-body bg-dark text-danger">
-                            En 2029, une météorite est tombée quelque part au Québec. À l'intérieur de cette météorite se trouvait un alien : Le Chaki <i class="bi bi-rocket"></i>.
+                            En 2029, une météorite est tombée quelque part au Québec. Dedans cette météorite se trouvait un alien : Le Chaki <i class="bi bi-rocket"></i>.
                             <hr class="text-danger">
                             Pendant des millénaires, le Chaki <i class="bi bi-rocket"></i> a aspiré les nutriments de la terre pour se préparer à propager son espèce.
                         </div>
@@ -70,16 +72,22 @@
             <canvas class="zdog-canvas"></canvas>
         </div>
         
-        <div class="forms">
-            
+        <div class="forms d-flex flex-column align-items-center justify-content-center p-2">
+            <canvas id="chart1"></canvas>
+
+            <div>
+                <input type="range" class="range-1" min="1" max="100" step="1">
+                <input type="range" class="range-2" min="1" max="100" step="1">
+                <input type="range" class="range-3" min="1" max="100" step="1">
+            </div>
         </div>
         
         <div class="fin">
             
         </div>
         
-        <div class="timer">
-            
+        <div class="timer d-flex flex-column align-items-center justify-content-center">
+            <p class="display-1 text-success">00:00:00</p>
         </div>
         
         <div class="coordinates">
