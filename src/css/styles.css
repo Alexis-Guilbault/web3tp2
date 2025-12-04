@@ -27,13 +27,21 @@ body {
     width: 100%;
 }
 
+.conteneur > div {
+    border: 2px solid lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .mise_en_contexte {
-    background-color: red;
+    background-color: black;
     grid-area: mise;
 }
 
 .zdog {
-    background-color: blue;
+    background-color: black;
     grid-area: zdog;
 }
 
@@ -43,26 +51,69 @@ body {
 }
 
 .forms {
-    background-color: green;
+    background-color: black;
     grid-area: forms;
 }
 
 .fin {
-    background-color: pink;
+    background-color: black;
     grid-area: fin; 
 }
 
 .timer {
-    background-color: yellow;
+    background-color: black;
     grid-area: timer;
 }
 
 .coordinates {
-    background-color: purple;
+    background-color: black;
     grid-area: coordinates;
 }
 
+#coordinates {
+    height: 100%;
+    width: 100%;
+    mix-blend-mode:difference;
+}
+
 .scroll {
-    background-color: orange;
+    background-color: black;
     grid-area: scrolling;
+    overflow: auto !important;
+}
+.conteneur-scroll {
+    height: 300%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.boule-scroll {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+}
+
+.cross {
+    position: absolute;
+    top: 65%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+}
+
+.fin > p {
+    font-size: 50px;
+}
+
+.chaki {
+    position: relative;
+    display: none;
+}
+
+.message-fin {
+    display: none;
 }

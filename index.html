@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.13.0/dist/maplibre-gl.css" />
     <script type="importmap">
     {
         "imports": {
@@ -17,7 +18,7 @@
             "chart.js/auto": "./node_modules/chart.js/auto/auto.js",
             "@kurkle/color": "./node_modules/@kurkle/color/dist/color.esm.js",
             "zdog": "https://esm.sh/zdog",
-            "maplibre": "https://unpkg.com/maplibre-gl@5.13.0/dist/maplibre-gl.css",
+            "maplibre-gl": "https://esm.sh/maplibre-gl@5.13.0",
             "vfx-js": "https://esm.sh/@vfx-js/core",
             "tonejs": "https://esm.sh/tone@15.1.22"
         }
@@ -25,17 +26,17 @@
     </script>
     
     <script src="./src/js/bootstrap.js" defer></script>
+    <script src="./src/js/tonejs.js" type="module"></script>
     <script src="./src/js/anime.js" type="module"></script>
     <script src="./src/js/chartjs.js" type="module"></script>
     <script src="./src/js/zdog.js" type="module"></script>
     <script src="./src/js/maplibre.js" type="module"></script>
-    <script src="./src/js/vfx.js" type="module"></script>
-    <script src="./src/js/tonejs.js" type="module"></script>
+    <script src="./src/js/vfx.js" type="module"></script>    
 
     <script src="./src/js/script.js" defer></script>
 </head>
 <body>
-    <div class="conteneur">
+    <div class="conteneur text-success">
         <div class="mise_en_contexte d-flex flex-column align-items-center justify-content-center p-2">
             <h1 class="display-1 text-center">Mission : Trouver le Chaki <i class="bi bi-rocket"></i></h1>
             <p class="display-6 text-center">Le Chaki <i class="bi bi-rocket"></i> est un alien dangereux s'étant retrouvé sur la terre. Vous devez l'abattre.</p>
@@ -47,18 +48,18 @@
             <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header bg-dark text-danger">
+                        <div class="modal-header bg-dark text-success">
                             <h5 class="modal-title" id="ModalLabel">Plus sur Chaki</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
-                        <div class="modal-body bg-dark text-danger">
+                        <div class="modal-body bg-dark text-success">
                             En 2029, une météorite est tombée quelque part au Québec. Dedans cette météorite se trouvait un alien : Le Chaki <i class="bi bi-rocket"></i>.
-                            <hr class="text-danger">
+                            <hr class="text-success">
                             Pendant des millénaires, le Chaki <i class="bi bi-rocket"></i> a aspiré les nutriments de la terre pour se préparer à propager son espèce.
                         </div>
 
-                        <div class="modal-footer bg-dark text-danger">
+                        <div class="modal-footer bg-dark text-success">
                             <button type="button" class="btn btn-success" data-bs-dismiss="modal">Fermer</button>
                         </div>
 
@@ -83,7 +84,8 @@
         </div>
         
         <div class="fin">
-            
+            <img src="./assets/img/chaki.png" alt="image du chaki" class="chaki">
+            <p class="text-success message-fin">Mission réussie</p>
         </div>
         
         <div class="timer d-flex flex-column align-items-center justify-content-center">
@@ -91,11 +93,13 @@
         </div>
         
         <div class="coordinates">
-            
+            <div id="coordinates"></div>
         </div>
         
         <div class="scroll">
-            
+            <div class="text-danger conteneur-scroll">
+                <i class="bi bi-circle-fill boule-scroll"></i>
+            </div>
         </div>
     </div>
 </body>

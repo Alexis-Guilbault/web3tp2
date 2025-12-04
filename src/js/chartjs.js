@@ -1,4 +1,5 @@
 import { Chart, Ticks, Title } from 'chart.js/auto';
+import { AlignSound } from './tonejs.js';
 
 const series = [
     { x:"charte 1", y: parseInt(document.querySelector('.range-1').value) },
@@ -13,7 +14,7 @@ let configurations = {
         {
             label: "Valeurs des chartes",
             data: series,
-            borderColor: 'rgba(75, 192, 192, 1)',
+            borderColor: 'rgba(255, 0, 0, 1)',
         }
     ]
   },
@@ -50,7 +51,7 @@ let configurations = {
         title: {
             display: true,
             text: 'Allignez les points.',
-            color: 'white',
+            color: 'rgba(255, 0, 0, 1)',
             font: {
                 size: 24,
                 weight: 'bold',
@@ -76,6 +77,7 @@ function checkReponse() {
         graphique.options.plugins.title.text = "Réussi.";
         graphique.data.datasets[0].borderColor = 'rgba(0, 255, 0, 1)';
         graphique.update();
+        AlignSound();
     }
 }
 
